@@ -10,7 +10,7 @@ def kontaktu_piev():
 
   d_gramatina.piev_kontaktu(vards, numurs)
 
-kontaktu_piev()
+#kontaktu_piev()
 
 #Kontaktu atrašana. (Meklē pēc pilnā vārda)
 def kont_atrasana():
@@ -20,14 +20,38 @@ def kont_atrasana():
   if numurs:
     print(f"{vards} numurs ir {numurs}")
   else:
-    print(f"Izskatās, ka {vards} nav sarakstā")
+    sakrit = d_gramatina.kont_meklesana(vards)
+    if sakrit:
+      for k in sakrit:
+       print(f"{k} numurs ir {sakrit[k]}")
+    else:
+      print(f"Izskatās, ka {vards} nav sarakstā")
 
-kont_atrasana()
+#Kontaktu rediģēšana
+def kontaktu_red():
+  iepr_v = input("Ievadi kontakta vārdu, kuru vēlies rediģēt: ")
+  iepr_numurs = d_gramatina.atrod_kontaktu()
+
+  if iepr_numurs:
+    jaunais_v = input(f"Ievadi {iepr_v} kontakta jauno vārdu (ja nevēlies mainīt vārdu, atstāj tukšu): ")
+    jaunais_n = input(f"Ievadi {iepr_numurs} kontakta jauno numuru (ja nevēlies mainīt numuru, atstāj tukšu): ")
+
+    if not jaunais_v:
+      d_gramatina.mainit_numuru(iepr_v, jaunais_n)
+
+    if not jaunais_n:
+      jaunais_n = iepr_numurs
+
+    else:
+      d_gramatina.mainit_kontaktu(iepr_v, jaunais_v, jaunais_n)
+  
+
 
 def galvena_izv():
+  sakums = ("\n1 - Kontaktu pievienošana\n2 - Kontakta meklēšana\n")
   print(sakums)
   izvele = input("Tava izvēlētā darbība: ")
-
+  
   if izvele == "1":
     kontaktu_piev()
   elif izvele == "2":
@@ -37,5 +61,4 @@ def galvena_izv():
 
 while True:
   galvena_izv()
-  input("\nNospied Enter, lai turpinātu\n\n")
-  
+  input("\nNospied Enter, lai turpinātu\n")
