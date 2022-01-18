@@ -10,8 +10,6 @@ def kontaktu_piev():
 
   d_gramatina.piev_kontaktu(vards, numurs)
 
-#kontaktu_piev()
-
 #Kontaktu atrašana. (Meklē pēc pilnā vārda)
 def kont_atrasana():
   vards = input("Lūzu, ievadi kontakta vārdu, kuru meklē: ")
@@ -30,25 +28,39 @@ def kont_atrasana():
 #Kontaktu rediģēšana
 def kontaktu_red():
   iepr_v = input("Ievadi kontakta vārdu, kuru vēlies rediģēt: ")
-  iepr_numurs = d_gramatina.atrod_kontaktu()
+  iepr_numurs = d_gramatina.atrod_kontaktu(iepr_v)
 
   if iepr_numurs:
     jaunais_v = input(f"Ievadi {iepr_v} kontakta jauno vārdu (ja nevēlies mainīt vārdu, atstāj tukšu): ")
     jaunais_n = input(f"Ievadi {iepr_numurs} kontakta jauno numuru (ja nevēlies mainīt numuru, atstāj tukšu): ")
 
     if not jaunais_v:
-      d_gramatina.mainit_numuru(iepr_v, jaunais_n)
+          d_gramatina.mainit_numuru(iepr_v, jaunais_n)
 
     if not jaunais_n:
       jaunais_n = iepr_numurs
 
     else:
       d_gramatina.mainit_kontaktu(iepr_v, jaunais_v, jaunais_n)
+  else:
+    print(f"Izskatās, ka {iepr_v} nav sarakstā.")
   
+#Kontaktu dzēšana
 
+def kont_dzesana():
+  vards = input("Ievadi kontakta vārdu, kuru vēlies dzēst: ")
+  numurs = d_gramatina.atrod_kontaktu(vards)
+
+  if numurs:
+    lemums = input(f"Vai jūs tiešām vēlaties izdzēst šo kontaktu: {vards} - {numurs}? (1 - Jā, 2 - Nē)")
+
+    if lemums == "1":
+      d_gramatina.dzest_kont(vards)
+    else:
+      print(f"Kontakts {vards} netika dzēsts.")
 
 def galvena_izv():
-  sakums = ("\n1 - Kontaktu pievienošana\n2 - Kontakta meklēšana\n")
+  sakums = ("\n1 - Kontaktu pievienošana\n2 - Kontakta meklēšana\n3 - Kontakta rediģēšana\n4 - Kontakta dzēšana")
   print(sakums)
   izvele = input("Tava izvēlētā darbība: ")
   
@@ -56,9 +68,12 @@ def galvena_izv():
     kontaktu_piev()
   elif izvele == "2":
     kont_atrasana()
+  elif izvele == "3":
+    kontaktu_red()
+  elif izvele == "4":
   else:
-    print("Neeksistējoša darbība, lūdzu, mēģini vēlreiz!")
+   print("Neeksistējoša darbība, lūdzu, mēģini vēlreiz!")
 
 while True:
   galvena_izv()
-  input("\nNospied Enter, lai turpinātu\n")
+  input("\nNospied Enter, lai turpinātu!\n")
