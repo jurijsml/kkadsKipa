@@ -1,4 +1,4 @@
-#Kontaktu grāmatiņa
+ #Kontaktu grāmatiņa
 
 import d_gramatina
 
@@ -58,9 +58,11 @@ def kont_dzesana():
       d_gramatina.dzest_kont(vards)
     else:
       print(f"Kontakts {vards} netika dzēsts.")
+  else:
+   print("Neeksistējoša darbība, lūdzu, mēģini vēlreiz!")
 
 def galvena_izv():
-  sakums = ("\n1 - Kontaktu pievienošana\n2 - Kontakta meklēšana\n3 - Kontakta rediģēšana\n4 - Kontakta dzēšana")
+  sakums = ("\n1 - Kontaktu pievienošana\n2 - Kontakta meklēšana\n3 - Kontakta rediģēšana\n4 - Kontakta dzēšana\n5 - Iziet")
   print(sakums)
   izvele = input("Tava izvēlētā darbība: ")
   
@@ -71,9 +73,7 @@ def galvena_izv():
   elif izvele == "3":
     kontaktu_red()
   elif izvele == "4":
-  else:
-   print("Neeksistējoša darbība, lūdzu, mēģini vēlreiz!")
-
+    kont_dzesana()
 while True:
   galvena_izv()
   input("\nNospied Enter, lai turpinātu!\n")
