@@ -8,7 +8,7 @@ def precu_piev():
 
   print(f"Pievieno {nosauk} ar numuru - {cena}")
 
-  d_gramatina.piev_precu(nosauk, cena)
+  d_cenas.piev_precu(nosauk, cena)
 
 #Kontaktu atrašana. (Meklē pēc pilnā vārda)
 def precu_atrasana():
