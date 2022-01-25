@@ -27,7 +27,7 @@ def precu_atrasana():
 
 #Kontaktu rediģēšana
 def precu_red():
-  iepr_m = input("Ievadi kontakta vārdu, kuru vēlies rediģēt: ")
+  iepr_n = input("Ievadi kontakta vārdu, kuru vēlies rediģēt: ")
   iepr_cena = d_cenas.atrod_preci(iepr_n)
 
   if iepr_cena:
