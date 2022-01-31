@@ -1,4 +1,4 @@
- #Kontaktu grāmatiņa
+#Kontaktu grāmatiņa
 
 import d_gramatina
 

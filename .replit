@@ -1,2 +1,2 @@
 language = "python3"
-run = "python datubaze/k_gramatina.py"
+run = "python ieskaite_3/v_cenas.py"

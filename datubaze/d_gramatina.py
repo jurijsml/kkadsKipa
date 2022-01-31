@@ -21,7 +21,7 @@ def kont_meklesana(simbols):
 
 #Rediģēšana
 #Mainām numuru
-def mainit_numuru(iepr_v, jaunais_v):
+def mainit_numuru(iepr_v, jaunais_n):
   db[iepr_v]=jaunais_n
   print(f"Kontakta {iepr_v} jaunais numurs ir {jaunais_n}.")
 #Mainām visu kontaktu
