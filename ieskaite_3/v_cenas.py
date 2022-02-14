@@ -3,19 +3,17 @@ import d_cenas
 def precu_piev():
   nosauk = input("Lūdzu, ievadiet preces nosaukumu: ")
   cena = input("Lūdzu, ievadiet preces cenu: ")
-  masa = input("Lūdzu, ievadiet preces masu (gramos): ")
 
-  print(f"Pievieno {nosauk} ar cenu - {cena} un masu {masa}")
+  print(f"Pievieno {nosauk} ar cenu - {cena}.")
 
-  d_cenas.piev_preci(nosauk, cena, masa)
+  d_cenas.piev_preci(nosauk, cena)
 
 def precu_atrasana():
   nosauk = input("Lūzu, ievadi preces nosaukumu, kuru meklē: ")
   cena = d_cenas.atrod_preci(nosauk)
-  masa = d_cenas.atrod_preci(nosauk)
 
   if cena:
-    print(f"{nosauk} cena ir €{cena}, un masa - {masa}g")
+    print(f"{nosauk} cena ir €{cena}.")
   else:
     sakrit = d_cenas.precu_meklesana(nosauk)
     if sakrit:
@@ -27,12 +25,12 @@ def precu_atrasana():
 def precu_red():
   iepr_n = input("Ievadi preces nosaukumu, kuru vēlies rediģēt: ")
   iepr_cena = d_cenas.atrod_preci(iepr_n)
-  
+
   if iepr_cena:
     jaunais_n = input(f"Ievadi preces ({iepr_n}) jauno nosaukumu (ja nevēlies mainīt nosaukumu, atstāj tukšu): ")
-    jauna_c = input(f"Ievadi preces ({iepr_cena}) jauno cenu (ja nevēlies mainīt cenu, atstāj tukšu): ")
+    jauna_c = input(f"Ievadi preces ({iepr_n}) jauno cenu (ja nevēlies mainīt cenu, atstāj tukšu): ")
 
-    if not jaunais_n:
+    if not jauna_c:
       d_cenas.mainit_cenu(iepr_n, jauna_c)
 
     if not jauna_c:

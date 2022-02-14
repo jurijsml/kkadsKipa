@@ -35,7 +35,7 @@ def kontaktu_red():
     jaunais_n = input(f"Ievadi {iepr_numurs} kontakta jauno numuru (ja nevēlies mainīt numuru, atstāj tukšu): ")
 
     if not jaunais_v:
-          d_gramatina.mainit_numuru(iepr_v, jaunais_n)
+      d_gramatina.mainit_numuru(iepr_v, jaunais_n)
 
     if not jaunais_n:
       jaunais_n = iepr_numurs
