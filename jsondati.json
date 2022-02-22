@@ -1,0 +1,19 @@
+{
+  "Name": "Anna",
+  "Age": 30,
+  "Animals": true,
+  "Kids": [
+    "Sinda",
+    "Aldis"
+  ],
+  "Cars": [
+    {
+      "Model": "Audi",
+      "Year": 2007
+    },
+    {
+      "Model": "BMW",
+      "Year": 2008
+    }
+  ]
+}

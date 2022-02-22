@@ -1,2 +1,2 @@
 language = "python3"
-run = "python flask1/flask1.py"
+run = "python tekstafaili/jsonfaili.py"
