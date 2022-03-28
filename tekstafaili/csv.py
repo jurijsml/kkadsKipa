@@ -2,7 +2,7 @@ import csv
 
 fails=open("csv_meg.csv")
 
-lasit_csv=csv.reader.(fails)
+lasit_csv=csv.reader(fails)
 print(lasit_csv)
 
 header=[]

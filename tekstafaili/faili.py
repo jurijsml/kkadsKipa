@@ -16,7 +16,5 @@ with open('pirmais.txt',"r",encoding="utf-8") as f:
   print(f.read())
   print(f.readline())
 
-
-
 with open('pirmais.txt',"a",encoding="utf-8") as f:
  f.write("Es esmu te")
