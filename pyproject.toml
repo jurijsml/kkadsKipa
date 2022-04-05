@@ -7,6 +7,7 @@ authors = ["jurijsml <<>>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 replit = "^3.2.4"
+PySimpleGUI = "^4.58.0"
 
 [tool.poetry.dev-dependencies]
 

@@ -1,2 +1,2 @@
 language = "python3"
-run = "python tekstafaili/jsonfaili.py"
+run = "python txt/04_04.py"

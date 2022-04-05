@@ -31,3 +31,4 @@ def lietotajs(vards,vecums):
   return json_data
   
 app.run(host = "0.0.0.0", port=8080)
+

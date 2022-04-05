@@ -162,6 +162,14 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "pysimplegui"
+version = "4.58.0"
+description = "Python GUIs for Humans. Launched in 2018. It's 2022 & PySimpleGUI is an ACTIVE & supported project. Super-simple to create custom GUI's. 325+ Demo programs & Cookbook for rapid start. Extensive documentation. Main docs at www.PySimpleGUI.org. Fun & your success are the focus. Examples using Machine Learning (GUI, OpenCV Integration), Rainmeter Style Desktop Widgets, Matplotlib + Pyplot, PIL support, add GUI to command line scripts, PDF & Image Viewers. Great for beginners & advanced GUI programmers."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "replit"
 version = "3.2.4"
 description = "A library for interacting with features of repl.it"
@@ -241,7 +249,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "51b0542e716c90d6c57fa9f97b6c828b66b936425d6c444546be0a7f81b32a5a"
+content-hash = "44545ddcd9bfb056e492f7d23c4066361954a798f219a4ced12e92c61a4fc5a0"
 
 [metadata.files]
 aiohttp = [
@@ -580,6 +588,10 @@ multidict = [
     {file = "multidict-5.2.0-cp39-cp39-win32.whl", hash = "sha256:1c7976cd1c157fa7ba5456ae5d31ccdf1479680dc9b8d8aa28afabc370df42b8"},
     {file = "multidict-5.2.0-cp39-cp39-win_amd64.whl", hash = "sha256:c9631c642e08b9fff1c6255487e62971d8b8e821808ddd013d8ac058087591ac"},
     {file = "multidict-5.2.0.tar.gz", hash = "sha256:0dd1c93edb444b33ba2274b66f63def8a327d607c6c790772f448a53b6ea59ce"},
+]
+pysimplegui = [
+    {file = "PySimpleGUI-4.58.0-py3-none-any.whl", hash = "sha256:e6b8e92f885f47dd3b9b38c110efdc26e11f2388b637bdc361fb87604f4a279f"},
+    {file = "PySimpleGUI-4.58.0.tar.gz", hash = "sha256:cd582b8e944e0dd7a480f109f8cec1ddc0887bb5e66692501b9260c9e7b98710"},
 ]
 replit = [
     {file = "replit-3.2.4-py3-none-any.whl", hash = "sha256:4fa5895e1e090ba23c179641bc88ab0486d1bea696515aa3147fce55733e29e1"},
